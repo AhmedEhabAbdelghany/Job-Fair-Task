@@ -160,15 +160,7 @@ function sarching() {
             if (res.name.toLowerCase().includes(searchword.toLowerCase())) {
                 searchresult.push(res)
                 displayData(searchresult)
-            } else if (searchresult != "") {
-                res.transactions.map((amountRes) => {
-                    if (amountRes.amount.includes(searchword)) {
-                        console.log("nicee nekk")
-                    } else {
-                        console.log("not nicee nekk")
-                    }
-                })
-            } else if (searchresult.length == 0) {
+            }else if (searchresult.length == 0) {
                 // container.innerHTML = `<tr><td colspan="4"><img src="./images/notfound.gif" class="notfound w-75" alt=""></td></tr>`;
                 console.log("res")
             }
