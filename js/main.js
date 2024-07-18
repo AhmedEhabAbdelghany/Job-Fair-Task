@@ -160,7 +160,18 @@ function sarching() {
             if (res.name.toLowerCase().includes(searchword.toLowerCase())) {
                 searchresult.push(res)
                 displayData(searchresult)
-            }else if (searchresult.length == 0) {
+            } else if (searchword != "") {
+                res.transactions.map((transRes, index) => {
+                    if (transRes.amount == searchword) {
+                        console.log(transRes)
+                        searchresult.push(res)
+                        displayData(searchresult)
+                    } else {
+                        console.log('we have error')
+                    }
+                })
+
+            } else if (searchresult.length == 0) {
                 // container.innerHTML = `<tr><td colspan="4"><img src="./images/notfound.gif" class="notfound w-75" alt=""></td></tr>`;
                 console.log("res")
             }
