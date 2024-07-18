@@ -81,7 +81,7 @@ const data = [{
         "amount": 875
     }
     ]
-}]; // assume the data is stored in this variable
+}]; 
 
 const result = data.reduce((acc, current) => {
     current.customers.forEach((customer) => {
